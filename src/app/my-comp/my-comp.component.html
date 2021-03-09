@@ -1,21 +1,25 @@
 <div class="container mt-4">
     <p>{{ getInfo()}}</p><br>
-    <h1 class="bordered">{{ number ==5 ? 'Hello ': 'not 5'}}</h1>
-    <table class="table   table-stripped">
+    <p [textContent]="number"></p>
+    <div>
+        <h1 [class.green]="isActive">{{ number ==5 ? 'Hello ': 'not 5'}}</h1>
+        <h1 [style.color]="isActive ? 'red':'green'">USER </h1>
+    </div>
+    <table class="table   table-bordered">
         <thead class="bg-secondary">
             <tr>
-                <td>Name</td>
-                <td>Age</td>
-                <td>actions</td>
+                <td [attr.colspan]='number'>Name</td>
+
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>{{ info.name}}</td>
-                <td>{{ info.age}}</td>
+
                 <td>
-                    <a href="" class="btn btn-warning"> Edit</a>
-                    <a href="" class="btn btn-danger ml-2"> Delete</a>
+                    <img [attr.src]=" imgSrc " alt="ts_js" width="70" height="70">
+                    <input>
+                    <a type="submit" (click)="onClick($event)" class=" btn btn-success ">
+                        click</a>
                 </td>
             </tr>
         </tbody>

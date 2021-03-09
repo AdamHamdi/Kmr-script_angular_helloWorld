@@ -1,4 +1,7 @@
-app-my-comp {
+.green {
+    color: green;
+}
+
+.red {
     color: red;
-    background: yellow;
 }

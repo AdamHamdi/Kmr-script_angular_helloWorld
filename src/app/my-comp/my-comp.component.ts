@@ -7,11 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyCompComponent implements OnInit {
   info={
-    name:"adam",
-    age:29
+    name : "adam",
+    age : 29
 
   }
-  number=5;
+  number =5;
+  imgSrc ='../../assets/img/ts_js.PNG';
+  isActive = true;
   constructor( ) {
 
 
@@ -22,6 +24,9 @@ export class MyCompComponent implements OnInit {
   }
 getInfo(){
   return "my name is " + this.info.name + " and i'm " + this.info.age +" years old." ;
+}
+onClick(e){
+  console.log(e.target);
 }
 
 
