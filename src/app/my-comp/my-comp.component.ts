@@ -11,6 +11,7 @@ export class MyCompComponent implements OnInit {
     age:29
 
   }
+  number=5;
   constructor( ) {
 
 
