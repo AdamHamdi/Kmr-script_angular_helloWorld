@@ -14,6 +14,7 @@ export class MyCompComponent implements OnInit {
   number =5;
   imgSrc ='../../assets/img/ts_js.PNG';
   isActive = true;
+  val="Hello World";
   constructor( ) {
 
 
@@ -29,6 +30,9 @@ onClick(e){
   console.log(e.target);
 }
 
+onKeyUp(e){
+  console.log(e.target.value);
+}
 
 
 

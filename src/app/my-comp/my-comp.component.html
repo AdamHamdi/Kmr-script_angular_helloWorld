@@ -17,8 +17,8 @@
 
                 <td>
                     <img [attr.src]=" imgSrc " alt="ts_js" width="70" height="70">
-                    <input>
-                    <a type="submit" (click)="onClick($event)" class=" btn btn-success ">
+                    <input [(ngModel)]="val" name=" input " type="text " (keyup.enter)="onKeyUp($event) ">
+                    <a type="submit " (click)="onClick($event) " class=" btn btn-success ">
                         click</a>
                 </td>
             </tr>
