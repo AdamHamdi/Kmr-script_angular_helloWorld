@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./my-comp.component.css']
 })
 export class MyCompComponent implements OnInit {
+name="adam hamdi"
+age=29;
+  constructor( ) {
 
-  constructor() { }
+  }
 
   ngOnInit(): void {
   }
+
+
+
+
+
 
 }
