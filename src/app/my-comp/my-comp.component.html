@@ -1,2 +1,23 @@
-<p>{{ getInfo()}}</p><br>
-<p></p>
+<div class="container mt-4">
+    <p>{{ getInfo()}}</p><br>
+    <h1 class="bordered">{{ number ==5 ? 'Hello ': 'not 5'}}</h1>
+    <table class="table   table-stripped">
+        <thead class="bg-secondary">
+            <tr>
+                <td>Name</td>
+                <td>Age</td>
+                <td>actions</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ info.name}}</td>
+                <td>{{ info.age}}</td>
+                <td>
+                    <a href="" class="btn btn-warning"> Edit</a>
+                    <a href="" class="btn btn-danger ml-2"> Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
