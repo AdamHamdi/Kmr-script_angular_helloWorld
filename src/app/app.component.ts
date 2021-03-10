@@ -8,7 +8,7 @@ import { element } from 'protractor';
 })
 export class AppComponent {
   title = 'HelloWorld1';
-
+  // exact=true;
   done(e){
     console.log(e)
   }
