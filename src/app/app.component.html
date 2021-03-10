@@ -29,7 +29,70 @@
             <div class="row">
                 <div class="col-md-12">
                     <table class="table table-bordered">
-                        <thead class="bg-info">
+                        <thead class="bg-primary">
+                            <tr>
+                                <th>Name</th>
+                                <th>Age</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Adam </td>
+                                <td>29</td>
+                                <td>Edit</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table table-bordered">
+                        <thead class="bg-secondary">
+                            <tr>
+                                <th>Name</th>
+                                <th>Age</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Adam </td>
+                                <td>29</td>
+                                <td>Edit</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table table-bordered">
+                        <thead class="bg-warning">
+                            <tr>
+                                <th>Name</th>
+                                <th>Age</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Adam </td>
+                                <td>29</td>
+                                <td>Edit</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table table-bordered">
+                        <thead class="bg-danger">
                             <tr>
                                 <th>Name</th>
                                 <th>Age</th>
@@ -50,5 +113,6 @@
         </div>
     </ng-container>
 </app-my-comp>
-<router-outlet>
-</router-outlet>
+<app-product [isFavorite]="title" (myEvent)="done($event)"></app-product>
+<router-outlet></router-outlet>
+<!--  -->

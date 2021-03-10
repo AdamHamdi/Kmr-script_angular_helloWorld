@@ -5,11 +5,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MyCompComponent } from './my-comp/my-comp.component';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MyCompComponent
+    MyCompComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
