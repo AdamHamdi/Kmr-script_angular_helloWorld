@@ -1,27 +1,10 @@
-<div class="container mt-4">
-    <p>{{ getInfo()}}</p><br>
-    <p [textContent]="number"></p>
-    <div>
-        <h1 [class.green]="isActive">{{ number ==5 ? 'Hello ': 'not 5'}}</h1>
-        <h1 [style.color]="isActive ? 'red':'green'">USER </h1>
+<div class="card">
+    <div class="card-header">
+        <ng-content select=".heading">
+
+        </ng-content>
     </div>
-    <table class="table   table-bordered">
-        <thead class="bg-secondary">
-            <tr>
-                <td [attr.colspan]='number'>Name</td>
-
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-
-                <td>
-                    <img [attr.src]=" imgSrc " alt="ts_js" width="70" height="70">
-                    <input [(ngModel)]="val" name=" input " type="text " (keyup.enter)="onKeyUp($event) ">
-                    <a type="submit " (click)="onClick($event) " class=" btn btn-success ">
-                        click</a>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="card-body">
+        <ng-content select=".body"></ng-content>
+    </div>
 </div>
