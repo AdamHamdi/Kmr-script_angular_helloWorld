@@ -1,9 +1,9 @@
 <app-my-comp>
-    <div class="heading text-center">
+    <ng-container class="heading text-center">
 
         Liste des utilisateurs
-    </div>
-    <div class="body ">
+    </ng-container>
+    <ng-container class="body ">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -15,11 +15,40 @@
                                 <th>Actions</th>
                             </tr>
                         </thead>
+                        <tbody>
+                            <tr>
+                                <td>Adam </td>
+                                <td>29</td>
+                                <td>Edit</td>
+                            </tr>
+                        </tbody>
                     </table>
                 </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table table-bordered">
+                        <thead class="bg-info">
+                            <tr>
+                                <th>Name</th>
+                                <th>Age</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Adam </td>
+                                <td>29</td>
+                                <td>Edit</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
             </div>
         </div>
-    </div>
+    </ng-container>
 </app-my-comp>
 <router-outlet>
 </router-outlet>
