@@ -12,7 +12,13 @@ export class ProductComponent implements OnInit {
 // @Input() isFavorite = true;
 
 // @Output() myEvent = new EventEmitter();
-products : Array <Product>=[];
+products : Array <Product>=[
+  {
+    id : 1,
+    title :"product 1",
+    description :"product 1"
+  },
+];
 
   constructor(private prodservice: ServiceProductService) {
 

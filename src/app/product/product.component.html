@@ -25,11 +25,15 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr *ngFor="let product of products">
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                <tr *ngFor="let product of products; index as i">
+                                    <td>{{ product.id}}</td>
+                                    <td>{{ product.title}}</td>
+                                    <td>{{ product.description}}</td>
+                                    <td>
+                                        <a class="btn btn-danger">Supprimer</a>
+                                        <a class="btn btn-warning ml-2" [routerLink]="['/products', i+1]">Modifier</a>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
