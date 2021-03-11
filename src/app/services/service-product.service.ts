@@ -8,17 +8,20 @@ export class ServiceProductService {
   products : Product[]
   product :Product
   constructor() {
-    this.products = [
-      { id : 1, title : "PC Asus", description : "product 1"},
-      { id : 2, title : "Imprimante Epson",description : "product 2" },
-      { id : 3, title :"Tablette Samsung", description :  "product 3"}
-     ];
+    //changer les donnes au type array
+    let  savedProducts= localStorage.getItem('products');
+    if (savedProducts)
+     this.products=JSON.parse(savedProducts);
+     else
+     this.products=[];
   }
   // delete products
   deleteProduct(prod : Product){
     const index = this.products.indexOf(prod,0);
     if (index > -1) {
-       this.products.splice(index, 1); }
+       this.products.splice(index, 1);
+       }
+       this.saveAll();
 
   }
   // product constructor
@@ -28,6 +31,7 @@ export class ServiceProductService {
   }
   ajouterProduct( prod: Product){
     this.products.push(prod);
+    this.saveAll();
    }
    // retourne  l'id de produit pour editer
    consulterProduct(id:number): Product{
@@ -38,10 +42,14 @@ export class ServiceProductService {
     updateProduct(prod :Product){
       this.deleteProduct(prod);
       this.ajouterProduct(prod);
+      this.saveAll();
 
     }
+// save data in local storage
+    saveAll(){
+      localStorage.setItem('products',JSON.stringify(this.products));
+    }
 
-  
 
 
 }

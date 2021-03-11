@@ -14,7 +14,7 @@ currentProduct = new Product();
 
    constructor(private prodservice: ServiceProductService , private activatedroute :ActivatedRoute, private router :Router,
     private title: Title) {
-      this.title.setTitle('Update Products Manager');
+      this.title.setTitle('Update product ');
 
 
    }
