@@ -8,6 +8,7 @@ import { MyCompComponent } from './my-comp/my-comp.component';
 import { ProductComponent } from './product/product.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AddProductComponent } from './add-product/add-product.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { AddProductComponent } from './add-product/add-product.component';
     MyCompComponent,
     ProductComponent,
     NotFoundComponent,
-    AddProductComponent
+    AddProductComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
