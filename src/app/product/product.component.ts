@@ -12,15 +12,10 @@ export class ProductComponent implements OnInit {
 // @Input() isFavorite = true;
 
 // @Output() myEvent = new EventEmitter();
-products : Array <Product>=[
-  {
-    id : 1,
-    title :"product 1",
-    description :"product 1"
-  },
-];
+products : Product[];
 
   constructor(private prodservice: ServiceProductService) {
+    this.products = prodservice.listeProducts();
 
   }
 
@@ -30,4 +25,10 @@ products : Array <Product>=[
   // OnClick(){
   //   this.myEvent.emit(5555);
   // }
+  deleteProduct(prod : Product){
+    let conf = confirm("Etes-vous sûr de supprimer le produit ?");
+    if (conf)
+    this.prodservice.deleteProduct(prod);
+    return console.log(prod)
+  }
 }

@@ -7,19 +7,19 @@
                     <form>
                         <div class="form-group">
                             <label for="">ID</label>
-                            <input type="text" name="idProduct" class=" form-control ">
+                            <input type="text" name="idProduct" [(ngModel)]="newProduct.id" class=" form-control ">
                         </div>
                         <div class="form-group">
                             <label for="">Title</label>
-                            <input type="text" name="title" class=" form-control ">
+                            <input type="text" name="title" [(ngModel)]="newProduct.title" class=" form-control ">
                         </div>
                         <div class="form-group ">
                             <label for=" ">Description</label>
-                            <textarea type="text " class="form-control " name="descriptionProduct "></textarea>
+                            <textarea type="text " class="form-control " name="descriptionProduct " [(ngModel)]="newProduct.description"></textarea>
                         </div>
                         <div class="form-group ">
 
-                            <input type="submit " class="btn btn-primary" value="Add ">
+                            <input type="submit " (click)="addProduct()" class="btn btn-primary" value="Add ">
                         </div>
                     </form>
                 </div>
