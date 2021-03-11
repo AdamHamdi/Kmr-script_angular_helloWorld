@@ -31,7 +31,7 @@
                                     <td>{{ product.description}}</td>
                                     <td>
                                         <a class="btn btn-danger" (click)="deleteProduct(product)">Delete</a>
-                                        <a class="btn btn-warning ml-2" [routerLink]="['/products', i+1]">Edit</a>
+                                        <a class="btn btn-warning ml-2" [routerLink]="['/product', product.id]">Edit</a>
 
                                     </td>
                                 </tr>
