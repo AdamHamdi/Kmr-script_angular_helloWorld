@@ -1,7 +1,9 @@
-<a class="btn btn-success mt-4 ml-2" routerLink="" routerLinkActive="bg-warning" [routerLinkActiveOptions]="{exact:true}">Home</a>
-<a class="btn btn-success mt-4 ml-2" routerLink="/product" routerLinkActive="bg-warning">Product</a>
-<br><br>
-<!-- <app-my-comp>
+<div class="container"><a class="btn btn-success mt-4 ml-2" routerLink="" routerLinkActive="bg-warning" [routerLinkActiveOptions]="{exact:true}">Home</a>
+    <a class="btn btn-success mt-4 ml-2" routerLink="/product" routerLinkActive="bg-warning">Product</a>
+    <a class="btn btn-success mt-4 ml-2" routerLink="/add-product" routerLinkActive="bg-warning">Add Product</a>
+    <br><br>
+
+    <!-- <app-my-comp>
      <ng-container class="heading text-center">
 
         Liste des utilisateurs
@@ -114,9 +116,10 @@
 
             </div>
         </div>
-    </ng-container> 
+    </ng-container>
 </app-my-comp>
 <app-product></app-product> -->
-<!-- <app-product [isFavorite]="title" (myEvent)="done($event)"></app-product> -->
-<router-outlet></router-outlet>
-<!--  -->
+    <!-- <app-product [isFavorite]="title" (myEvent)="done($event)"></app-product> -->
+    <router-outlet></router-outlet>
+    <!--  -->
+</div>
