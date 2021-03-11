@@ -1,3 +1,42 @@
 <!-- <p>{{ isFavorite }}</p>
 <p (click)="OnClick()"> Hello</p> -->
-<p>product component works !</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 ">
+            <div class="card">
+                <div class="card-header d-flex">
+                    <h3>Liste des produits :</h3>
+                    <div class="ml-auto">
+                        <a routerLink="/add-product" class="btn btn-primary ">Add new product</a>
+                    </div>
+                </div>
+                <div class="card-body ">
+                    <div *ngIf="products.length == 0">
+                        <p class="alert alert-danger"> There is no product</p>
+                    </div>
+                    <div *ngIf="products.length !=0">
+                        <table class="table table-bordered">
+                            <thead class="bg-info">
+                                <tr>
+                                    <td>ID</td>
+                                    <td>Title</td>
+                                    <td>Description</td>
+                                    <td>Actions</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let product of products">
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

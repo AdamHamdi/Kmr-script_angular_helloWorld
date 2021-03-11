@@ -1,5 +1,6 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { ServiceProductService } from './../services/service-product.service';
+import { Product } from './../interfaces/product';
 
 
 @Component({
@@ -8,19 +9,19 @@ import { ServiceProductService } from './../services/service-product.service';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-@Input() isFavorite = true;
+// @Input() isFavorite = true;
 
-@Output() myEvent = new EventEmitter();
+// @Output() myEvent = new EventEmitter();
+products : Array <Product>=[];
 
+  constructor(private prodservice: ServiceProductService) {
 
-  constructor(private product_service: ServiceProductService) {
-    
   }
 
   ngOnInit(): void {
   }
 
-  OnClick(){
-    this.myEvent.emit(5555);
-  }
+  // OnClick(){
+  //   this.myEvent.emit(5555);
+  // }
 }
