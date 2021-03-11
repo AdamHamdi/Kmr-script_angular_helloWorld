@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ServiceProductService } from './../services/service-product.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from './../interfaces/product';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-update-product',
@@ -11,7 +12,9 @@ import { Product } from './../interfaces/product';
 export class UpdateProductComponent implements OnInit {
 currentProduct = new Product();
 
-   constructor(private prodservice: ServiceProductService , private activatedroute :ActivatedRoute, private router :Router) {
+   constructor(private prodservice: ServiceProductService , private activatedroute :ActivatedRoute, private router :Router,
+    private title: Title) {
+      this.title.setTitle('Update Products Manager');
 
 
    }

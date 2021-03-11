@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ServiceProductService } from './../services/service-product.service';
 import { Product } from './../interfaces/product';
 import { Router } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-add-product',
@@ -10,7 +11,9 @@ import { Router } from '@angular/router';
 })
 export class AddProductComponent implements OnInit {
   newProduct = new Product();
-  constructor(private prodservice:ServiceProductService ,private router: Router) { }
+  constructor(private prodservice:ServiceProductService ,private router: Router, private title: Title) {
+    this.title.setTitle('Add Products Manager');
+   }
 
   ngOnInit(): void {
   }

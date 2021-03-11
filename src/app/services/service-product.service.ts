@@ -9,8 +9,8 @@ export class ServiceProductService {
   product :Product
   constructor() {
     this.products = [
-      { id : 1, title : "PC Asus", description : "product 1",}
-      , { id : 2, title : "Imprimante Epson",description : "product 2" },
+      { id : 1, title : "PC Asus", description : "product 1"},
+      { id : 2, title : "Imprimante Epson",description : "product 2" },
       { id : 3, title :"Tablette Samsung", description :  "product 3"}
      ];
   }
@@ -21,20 +21,27 @@ export class ServiceProductService {
        this.products.splice(index, 1); }
 
   }
+  // product constructor
+  // retourne la liste des produit
   listeProducts():Product[] {
     return this.products;
   }
   ajouterProduct( prod: Product){
     this.products.push(prod);
    }
+   // retourne  l'id de produit pour editer
    consulterProduct(id:number): Product{
     this.product = this.products.find(p => p.id == id);
-     return this.product; }
+     return this.product;
+    }
+ // update component.ts
+    updateProduct(prod :Product){
+      this.deleteProduct(prod);
+      this.ajouterProduct(prod);
 
-  updateProduct(prod :Product){
-    this.deleteProduct(prod);
-    this.ajouterProduct(prod);
-  }
+    }
+
+  
 
 
 }

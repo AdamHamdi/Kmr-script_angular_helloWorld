@@ -1,6 +1,7 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { ServiceProductService } from './../services/service-product.service';
 import { Product } from './../interfaces/product';
+import { Title } from '@angular/platform-browser';
 
 
 
@@ -16,7 +17,8 @@ export class ProductComponent implements OnInit {
  products : Product[];
 
 
-  constructor(private prodservice: ServiceProductService ) {
+  constructor(private prodservice: ServiceProductService , private title: Title) {
+    this.title.setTitle('Products Manager');
     this.products = prodservice.listeProducts();
 
   }
