@@ -14,7 +14,8 @@ const routes: Routes = [
   {path:"",redirectTo:'products', pathMatch:'full'},
   {path:"product/:id",component:UpdateProductComponent},
   {path:"add-product",component:AddProductComponent},
-  {path:'**',component:NotFoundComponent}
+  {path:"my",component:MyCompComponent},
+  {path:'**',component:NotFoundComponent},
 ];
 
 @NgModule({
